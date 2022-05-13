@@ -1,42 +1,28 @@
 import AppLayout from 'components/AppLayout';
-import Image from 'next/image';
+import TabBar from '../components/TabBar/TabBar';
 
 export default function FontsPage() {
     return (
         <AppLayout title="atcampus - Fonts">
             <main className="m-4">
-                <h1 className="text-xl lg:text-2xl">Fonts & typography</h1>
-                <div className="mt-4">
-                    <Image
-                        tabIndex={0}
-                        aria-label={'colors'}
-                        className=""
-                        width={1440}
-                        height={900}
-                        src={'/images/styleguide-fonts.png'}
-                    />
-                </div>
-                <div className="mt-4">
-                    <Image
-                        tabIndex={0}
-                        aria-label={'colors'}
-                        className=""
-                        width={1440}
-                        height={900}
-                        src={'/images/styleguide-alignment.png'}
-                    />
-                </div>
-                <div className="mt-4">
-                    <Image
-                        tabIndex={0}
-                        aria-label={'colors'}
-                        className=""
-                        width={1440}
-                        height={900}
-                        src={'/images/styleguide-typography.png'}
-                    />
-                </div>
+                <h1 className="text-xl lg:text-2xl">StudyBuddy side</h1>
+                <div className="mt-4"></div>
             </main>
+            <div className="mt-8">
+                <h2 className="text-lg lg:text-xl mb-4">Tab Bar</h2>
+
+                <TabBar
+                    tabs={[
+                        { name: 'Tab 1', selected: true, href: '#1' },
+                        {
+                            name: 'Lorem Ipsum 2',
+                            selected: false,
+                            href: '#2'
+                        },
+                        { name: 'Tab 3', selected: false, href: '#3' }
+                    ]}
+                />
+            </div>
         </AppLayout>
     );
 }

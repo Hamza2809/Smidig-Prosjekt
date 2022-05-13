@@ -1,7 +1,7 @@
 import {
     ColorSwatchIcon,
     DocumentTextIcon,
-    HomeIcon,
+    HomeIcon
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -22,12 +22,11 @@ export default function Menu() {
             current: router.asPath === '/colors'
         },
         {
-            name: 'Studdybuddy',
+            name: 'Studybuddy',
             icon: DocumentTextIcon,
             href: '/fonts',
             current: router.asPath === '/fonts'
-        },
-
+        }
     ];
 
     function classNames(...classes) {
