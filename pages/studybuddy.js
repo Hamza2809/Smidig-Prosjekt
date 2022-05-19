@@ -3,7 +3,7 @@ import TabBar from '../components/TabBar/TabBar';
 
 export default function FontsPage() {
     return (
-        <AppLayout title="atcampus - Fonts">
+        <AppLayout title="atcampus - StudyBuddy">
             <header className="m-4">
                 <h1 className="text-xl lg:text-2xl">StudyBuddy side</h1>
                 <div className="mt-4"></div>

@@ -18,14 +18,14 @@ export default function Menu() {
         {
             name: 'Grupper',
             icon: ColorSwatchIcon,
-            href: '/colors',
-            current: router.asPath === '/colors'
+            href: '/grupper',
+            current: router.asPath === '/grupper'
         },
         {
             name: 'Studybuddy',
             icon: DocumentTextIcon,
-            href: '/fonts',
-            current: router.asPath === '/fonts'
+            href: '/studybuddy',
+            current: router.asPath === '/studybuddy'
         }
     ];
 
