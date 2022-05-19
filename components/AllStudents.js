@@ -106,34 +106,30 @@ export default function AllStudents() {
 
     return (
         <div>
-            <h3>React - Display a list of items</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Emne</th>
-                        <th>Ambisjoner</th>
-                        <th>Arbeids sted</th>
-                        <th>Arbeids mengde</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div>
+                <div className="flex flex-row flex-wrap">
                     {users &&
                         users.map((user) => (
-                            <tr key={user.id}>
-                                <td>
-                                    {user.firstName} {user.lastName}
-                                </td>
-                                <td>{user.email}</td>
-                                <td>{user.emne}</td>
-                                <td>{user.ambisjoner}</td>
-                                <td>{user.arbeidsSted}</td>
-                                <td>{user.arbeidsMengde}</td>
-                            </tr>
+                            <div className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-64 m-4" key={user.id}>
+                                <div className="name text-gray-800 text-xl font-medium mt-4" >
+                                   {user.firstName}
+                                </div>
+                                <div className="name text-gray-800 text-xl font-medium" >
+                                    {user.lastName}
+                                </div>
+                                <div className="mt-2 text-sky-800">{user.email}</div>
+                                <div className="mt-2 items-center font-medium mt-4">Emne:</div>
+                                <div>{user.emne}</div>
+                                <div className="mt-2 items-center font-medium mt-4">Ambisjoner:</div>
+                                <div>{user.ambisjoner}</div>
+                                <div className="mt-2 items-center font-medium mt-4">Arbeidssted:</div>
+                                <div>{user.arbeidsSted}</div>
+                                <div className="mt-2 items-center font-medium mt-4">Arbeidsmengde:</div>
+                                <div>{user.arbeidsMengde}</div>
+                            </div>
                         ))}
-                </tbody>
-            </table>
+                </div>
+            </div>
         </div>
     );
 }
