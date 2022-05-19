@@ -17,13 +17,17 @@ export default function FontsPage() {
 
                     <TabBar
                         tabs={[
-                            { name: 'Tab 1', selected: true, href: '#1' },
+                            { name: 'Alle studenter',
+                              selected: true,
+                              href: '#1' },
                             {
-                                name: 'Lorem Ipsum 2',
-                                selected: false,
-                                href: '#2'
+                              name: 'Kollokviegruppe',
+                              selected: false,
+                              href: '#2'
                             },
-                            { name: 'Tab 3', selected: false, href: '#3' }
+                            { name: 'Min profil',
+                              selected: false,
+                              href: '#3' }
                         ]}
                     />
                 </div>
