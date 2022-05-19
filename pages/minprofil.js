@@ -1,5 +1,6 @@
 import AppLayout from 'components/AppLayout';
 import TabBar from "../components/TabBar/TabBar";
+import MyProfile from "../components/MyProfile";
 
 export default function MinProfilPage() {
   return (
@@ -27,8 +28,10 @@ export default function MinProfilPage() {
 
         </div>
       </header>
-      <main className="m-4">
-        <h1 className="text-xl lg:text-2xl"></h1>
+      <main>
+        <div>
+          <MyProfile />
+        </div>
       </main>
     </AppLayout>
   );

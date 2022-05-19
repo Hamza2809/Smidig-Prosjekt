@@ -1,8 +1,6 @@
 import AppLayout from 'components/AppLayout';
 import TabBar from '../components/TabBar/TabBar';
 import AllStudents from "../components/AllStudents";
-import StudentGroup from "../components/StudentGroup";
-import MyProfile from "../components/MyProfile";
 
 export default function StudyBuddyPage() {
     return (
@@ -32,7 +30,8 @@ export default function StudyBuddyPage() {
             </header>
 
             <main>
-                <div className="mt-8">
+                <div>
+                  <AllStudents />
                 </div>
             </main>
         </AppLayout>

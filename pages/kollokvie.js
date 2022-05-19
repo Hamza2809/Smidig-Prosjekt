@@ -1,5 +1,6 @@
 import AppLayout from 'components/AppLayout';
 import TabBar from "../components/TabBar/TabBar";
+import KollokvieGroup from "../components/KollokvieGroups";
 
 export default function KollokviePage() {
   return (
@@ -28,7 +29,9 @@ export default function KollokviePage() {
         </div>
       </header>
       <main className="m-4">
-        <h1 className="text-xl lg:text-2xl"></h1>
+        <div>
+          <KollokvieGroup />
+        </div>
       </main>
     </AppLayout>
   );
