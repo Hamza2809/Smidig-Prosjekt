@@ -1,6 +1,6 @@
 import AppLayout from 'components/AppLayout';
 
-export default function ColorsPage() {
+export default function GroupsPage() {
     return (
         <AppLayout title="atcampus - Grupper">
             <main className="m-4">
