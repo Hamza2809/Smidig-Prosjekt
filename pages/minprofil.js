@@ -5,7 +5,7 @@ import MyProfile from "../components/MyProfile";
 export default function MinProfilPage() {
   return (
     <AppLayout title="atcampus - Kollokviegruppe">
-      <header className="m-4">
+      <main className="m-4">
         <h1 className="text-xl lg:text-2xl">Min profil</h1>
         <div className="mt-8">
 
@@ -27,11 +27,11 @@ export default function MinProfilPage() {
           />
 
         </div>
-      </header>
-      <main>
-        <div>
+
+        <div className="mt-8">
           <MyProfile />
         </div>
+
       </main>
     </AppLayout>
   );

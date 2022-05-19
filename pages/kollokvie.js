@@ -5,7 +5,7 @@ import KollokvieGroup from "../components/KollokvieGroups";
 export default function KollokviePage() {
   return (
     <AppLayout title="atcampus - Kollokviegruppe">
-      <header className="m-4">
+      <main className="m-4">
         <h1 className="text-xl lg:text-2xl">Kollokvie gruppe</h1>
         <div className="mt-8">
 
@@ -27,11 +27,11 @@ export default function KollokviePage() {
           />
 
         </div>
-      </header>
-      <main className="m-4">
-        <div>
+
+        <div className="mt-8">
           <KollokvieGroup />
         </div>
+
       </main>
     </AppLayout>
   );

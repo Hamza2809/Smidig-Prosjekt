@@ -5,7 +5,7 @@ import AllStudents from "../components/AllStudents";
 export default function StudyBuddyPage() {
     return (
         <AppLayout title="atcampus - StudyBuddy">
-            <header className="m-4">
+            <main className="m-4">
                 <h1 className="text-xl lg:text-2xl">Alle studenter</h1>
                 <div className="mt-8">
 
@@ -27,13 +27,13 @@ export default function StudyBuddyPage() {
                   />
 
                 </div>
-            </header>
 
-            <main>
-                <div>
-                  <AllStudents />
-                </div>
+              <div className="mt-8">
+                <AllStudents />
+              </div>
+
             </main>
+
         </AppLayout>
     );
 }
