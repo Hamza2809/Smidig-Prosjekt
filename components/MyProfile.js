@@ -5,7 +5,7 @@ export default function MyProfile() {
   return (
   <div className="">
     <div className="max-w-sm h-auto mx-auto my-20 rounded-md overflow-hidden shadow-lg">
-      <img className="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-purple-600"
+      <img className="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-violet-400"
            src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
            alt="Human Picture by Ike louie Natividad"/>
 
@@ -16,21 +16,22 @@ export default function MyProfile() {
         <div className="flex flex-col">
           <div className="font-bold text-xl text-center text-slate-900 hover:cursor-pointer">Mikasa Ackerman
           </div>
-          <p className="text-slate-900 text-sm text-center">Frontend og Mobilutvikling</p>
-        </div>
+          <p className="text-slate-900 text-sm text-center">Mikasa@fake.no</p>
+          <div>
+            <h4 className="text-sm text-center my-2 font-semibold">Emne: Emne 4</h4>
+            <h4 className="text-sm text-center my-2 font-semibold">Ambisjoner: A-B</h4>
+            <h4 className="text-sm text-center my-2 font-semibold">Arbeidssted: Hybrid</h4>
+            <h4 className="text-sm text-center my-2 font-semibold">Arbeidsmengde: 30-40 timer </h4>
+            <p className="text-xs mx-6 text-justify"></p>
+            <div className="flex flex-row justify-center font-semibold mx-auto my-4">
 
-      </div>
-
-      <div>
-        <h4 className="text-sm text-center my-2 font-semibold"> Ser etter noen som ønsker å jobbe 1-2 dager i uka, først og fremst med programmering.</h4>
-        <p className="text-xs mx-6 text-justify"></p>
-        <div className="flex flex-row justify-center font-semibold mx-auto my-4">
-
-          <div
-              className="my-auto text-white bg-violet-400 hover:bg-violet-400 hover:cursor-pointer rounded-3xl py-2 px-4 mx-2">Fiskepinner12@hotmail.com
+            </div>
           </div>
         </div>
+
       </div>
+
+
       <div className="bg-violet-400 text-white mt-5 px-6 pt-4 pb-2 flex flex-row justify-center">
         <div className="flex flex-row mx-1 hover:cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" className="mx-2" width="32" height="32" fill="currentColor"
