@@ -111,6 +111,11 @@ export default function AllStudents() {
                     {users &&
                         users.map((user) => (
                             <div className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-64 m-4" key={user.id}>
+                                <div>
+                                    <img className="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-pink-600"
+                                      src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                         alt="profile"/>
+                                </div>
                                 <div className="name text-gray-800 text-xl font-medium mt-4" >
                                    {user.firstName}
                                 </div>
