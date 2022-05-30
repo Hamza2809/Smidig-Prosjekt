@@ -110,8 +110,7 @@ export default function AllStudents() {
         <div>
             <div>
                 <div className="flex flex-row flex-wrap">
-                    {users &&
-                        users.map((user) => (
+                    {users && users.map((user) => (
                             <div className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-128 m-4 " key={user.id}>
                                 <img className="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-violet-400"
                                      src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
