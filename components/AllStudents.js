@@ -331,13 +331,6 @@ export default function AllStudents() {
             <div className="flex flex-row flex-wrap">
                 {users &&
                     users.filter(user => {
-                        // if (
-                        //     subject.length && user.emne !== subject ||
-                        //     ambition.length && user.ambisjoner !== ambition ||
-                        //     workplace.length && user.arbeidsSted !== workplace ||
-                        //     workload.length && user.arbeidsMengde !== workload
-                        // ) return false;
-
                         if (subject.length && user.emne !== subject) return false;
                         if (ambition.length && user.ambisjoner !== ambition) return false;
                         if (workplace.length && user.arbeidsSted !== workplace) return false;
