@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function AllStudents() {
-  const [users, setInfo] = useState([
+  const [users, setContact] = useState([
     {
       id: 1,
       firstName: 'Ola',
@@ -15,6 +15,7 @@ export default function AllStudents() {
       contact: 'Mail: ola_nordman@fake.no',
     },
   ]);
+
 
   return (
     <>
