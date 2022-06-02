@@ -301,29 +301,45 @@ export default function KollokvieGroup() {
                                     className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-64 m-4"
                                     key={user.id}
                                 >
-                                    <div className="name text-gray-800 text-xl font-medium mt-4">
+                                    <div className="name text-gray-800 text-xl font-medium mt-4 text-center">
                                         {user.groupName}
                                     </div>
-                                    <div className="name text-gray-800 text-xl font-medium">
+                                    <div className="name text-gray-800 text-xl font-medium text-center">
                                         {user.studyName}
                                     </div>
 
-                                    <div className="mt-2 items-center font-medium mt-4">
+                                    <div className="mt-2 items-center font-medium mt-4 font-semibold font-weight: 600">
                                         Beskrivelse:
                                     </div>
-                                    <div>{user.beskrivelse}</div>
-                                    <div className="mt-2 items-center font-medium mt-4">
+
+                                    <div className="name text-gray-800 font-medium text-center">
+                                        {user.beskrivelse}
+                                    </div>
+
+                                    <div className="mt-2 items-center font-medium mt-4 font-semibold font-weight: 600">
                                         Ambisjoner:
                                     </div>
-                                    <div>{user.ambisjoner}</div>
-                                    <div className="mt-2 items-center font-medium mt-4">
+
+                                    <div className="name text-gray-800 font-medium text-center">
+                                        {user.ambisjoner}
+                                    </div>
+
+                                    <div className="mt-2 items-center font-medium mt-4 font-semibold font-weight: 600">
                                         Arbeidssted:
                                     </div>
-                                    <div>{user.arbeidsSted}</div>
-                                    <div className="mt-2 items-center font-medium mt-4">
+
+                                    <div className="name text-gray-800 font-medium text-center">
+                                        {user.arbeidsSted}
+                                    </div>
+
+                                    <div className="mt-2 items-center font-medium mt-4 font-semibold font-weight: 600">
                                         Arbeidsmengde:
                                     </div>
-                                    <div>{user.arbeidsMengde}</div>
+
+                                    <div className="name text-gray-800 font-medium text-center">
+                                        {user.arbeidsMengde}
+                                    </div>
+
                                     <div className="bg-violet-400 text-white px-20 mt-4 pt-4 pb-2 flex flex-row justify-center rounded-2xl">
                                         <div className="flex flex-row mx-1 hover:cursor-pointer">
                                             <svg
