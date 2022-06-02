@@ -104,43 +104,230 @@ export default function KollokvieGroup() {
         }
     ]);
 
-    return (
-        <div>
-            <div>
-                <div className="flex flex-row flex-wrap">
-                    {groups &&
-                        groups.map((user) => (
-                            <div
-                                className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-64 m-4"
-                                key={user.id}
-                            >
-                                <div className="name text-gray-800 text-xl font-medium mt-4">
-                                    {user.groupName}
-                                </div>
-                                <div className="name text-gray-800 text-xl font-medium">
-                                    {user.studyName}
-                                </div>
+    const [ambition, setAmbition] = useState('');
+    const handleAmbitionChange = (event) => setAmbition(event.target.value);
 
-                                <div className="mt-2 items-center font-medium mt-4">
-                                    Beskrivelse:
-                                </div>
-                                <div>{user.beskrivelse}</div>
-                                <div className="mt-2 items-center font-medium mt-4">
-                                    Ambisjoner:
-                                </div>
-                                <div>{user.ambisjoner}</div>
-                                <div className="mt-2 items-center font-medium mt-4">
-                                    Arbeidssted:
-                                </div>
-                                <div>{user.arbeidsSted}</div>
-                                <div className="mt-2 items-center font-medium mt-4">
-                                    Arbeidsmengde:
-                                </div>
-                                <div>{user.arbeidsMengde}</div>
-                            </div>
-                        ))}
+    const [workplace, setWorkplace] = useState('');
+    const handleWorkplaceChange = (event) => setWorkplace(event.target.value);
+
+    const [workload, setWorkload] = useState('');
+    const handleWorkloadChange = (event) => setWorkload(event.target.value);
+
+    return (
+        <>
+            <div className="flex space-x-10">
+                <div>
+                    <h3>Ambisjoner</h3>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value=""
+                                checked={ambition === ''}
+                                onChange={handleAmbitionChange}
+                                className="mr-2"
+                            />
+                            Alle
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="A"
+                                checked={ambition === 'A'}
+                                onChange={handleAmbitionChange}
+                                className="mr-2"
+                            />
+                            A
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="A-C"
+                                checked={ambition === 'A-C'}
+                                onChange={handleAmbitionChange}
+                                className="mr-2"
+                            />
+                            A-C
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Bestått til D"
+                                checked={ambition === 'Bestått til D'}
+                                onChange={handleAmbitionChange}
+                                className="mr-2"
+                            />
+                            Bestått til D
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Arbeidssted</h3>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value=""
+                                checked={workplace === ''}
+                                onChange={handleWorkplaceChange}
+                                className="mr-2"
+                            />
+                            Alle
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Fysisk"
+                                checked={workplace === 'Fysisk'}
+                                onChange={handleWorkplaceChange}
+                                className="mr-2"
+                            />
+                            Fysisk
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Hybrid"
+                                checked={workplace === 'Hybrid'}
+                                onChange={handleWorkplaceChange}
+                                className="mr-2"
+                            />
+                            Hybrid
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value=" Over nett"
+                                checked={workplace === ' Over nett'}
+                                onChange={handleWorkplaceChange}
+                                className="mr-2"
+                            />
+                            Over nett
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Arbeidsmengde per uke</h3>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value=""
+                                checked={workload === ''}
+                                onChange={handleWorkloadChange}
+                                className="mr-2"
+                            />
+                            Alle
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="10-20 timer"
+                                checked={workload === '10-20 timer'}
+                                onChange={handleWorkloadChange}
+                                className="mr-2"
+                            />
+                            10-20 timer
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="20-40 timer"
+                                checked={workload === '20-40 timer'}
+                                onChange={handleWorkloadChange}
+                                className="mr-2"
+                            />
+                            20-40 timer
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                value="40-60 timer"
+                                checked={workload === '40-60 timer'}
+                                onChange={handleWorkloadChange}
+                                className="mr-2"
+                            />
+                            40-60 timer
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div className="flex flex-row flex-wrap">
+                {groups &&
+                    groups
+                        .filter((group) => {
+                            if (
+                                ambition.length &&
+                                group.ambisjoner !== ambition
+                            )
+                                return false;
+                            if (
+                                workplace.length &&
+                                group.arbeidsSted !== workplace
+                            )
+                                return false;
+                            if (
+                                workload.length &&
+                                group.arbeidsMengde !== workload
+                            )
+                                return false;
+
+                            return true;
+                        })
+                        .map((user) => (
+                            <div className="flex flex-row flex-wrap">
+                                <div
+                                    className="card bg-white flex flex-col items-center justify-center p-10 shadow-2xl rounded-2xl w-64 m-4"
+                                    key={user.id}
+                                >
+                                    <div className="name text-gray-800 text-xl font-medium mt-4">
+                                        {user.groupName}
+                                    </div>
+                                    <div className="name text-gray-800 text-xl font-medium">
+                                        {user.studyName}
+                                    </div>
+
+                                    <div className="mt-2 items-center font-medium mt-4">
+                                        Beskrivelse:
+                                    </div>
+                                    <div>{user.beskrivelse}</div>
+                                    <div className="mt-2 items-center font-medium mt-4">
+                                        Ambisjoner:
+                                    </div>
+                                    <div>{user.ambisjoner}</div>
+                                    <div className="mt-2 items-center font-medium mt-4">
+                                        Arbeidssted:
+                                    </div>
+                                    <div>{user.arbeidsSted}</div>
+                                    <div className="mt-2 items-center font-medium mt-4">
+                                        Arbeidsmengde:
+                                    </div>
+                                    <div>{user.arbeidsMengde}</div>
+                                </div>
+                            </div>
+                        ))}
+            </div>
+        </>
     );
 }
