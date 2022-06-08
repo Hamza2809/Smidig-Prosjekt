@@ -6,7 +6,7 @@ const AppLayout = ({ title = 'atcampus components', children }) => {
             <title>{title}</title>
             <div className="flex flex-col h-full">
                 <div className="h-full flex flex-col lg:flex-row">
-                    <div className="w-full lg:w-64 relative">
+                    <div className="w-full lg:w-64 relative flex-shrink-0"  >
                         <Menu />
                     </div>
                     {children}

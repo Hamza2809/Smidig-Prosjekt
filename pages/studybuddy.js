@@ -18,7 +18,7 @@ export default function StudyBuddyPage() {
                       {
                         name: 'Kollokviegruppe',
                         selected: false,
-                        href: '/kollokvie'
+                        href: '/kollokvie',
                       },
                       { name: 'Min profil',
                         selected: false,
