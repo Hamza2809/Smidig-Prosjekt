@@ -8,9 +8,6 @@ export default function GroupsPage() {
         <AppLayout title="atcampus - Grupper">
             <main className="m-4">
                 <h1 className="text-xl lg:text-2xl">Grupper</h1>
-              <RoundedSearch />
-              <TextInputField />
-              <TopSearch />
             </main>
         </AppLayout>
     );
