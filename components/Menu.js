@@ -22,7 +22,7 @@ export default function Menu() {
             current: router.asPath === '/grupper'
         },
         {
-            name: 'Studybuddy',
+            name: 'Finn studiepartner',
             icon: DocumentTextIcon,
             href: '/studybuddy',
             current: router.asPath === '/studybuddy'
