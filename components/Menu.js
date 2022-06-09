@@ -24,8 +24,8 @@ export default function Menu() {
         {
             name: 'Finn studiepartner',
             icon: DocumentTextIcon,
-            href: '/findstudents',
-            current: router.asPath === '/findstudents'
+            href: '/studybuddy',
+            current: router.asPath === '/studybuddy'
         }
     ];
 
